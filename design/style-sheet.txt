@@ -1,0 +1,25 @@
+# Front-end Style Guide
+
+## Colors
+
+### Primary
+
+- Blue: #244886
+- Second-blue: #2F5392
+
+### Neutral
+
+- Dark-text: #0f2137
+- Main-text: #343D48
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+font-family: 'DM Sans', sans-serif;
+- Weights: 400, 500, 700
