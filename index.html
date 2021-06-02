@@ -21,14 +21,13 @@
 
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0" tabindex="0">
 
     <!-- START NAV -->
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark py-3 py-sm-3">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark pt-3" id="navbar-example">
         <div class="container">
             <a class="navbar-brand" href="#0">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="185.92"
-                    height="36.62">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 40">
                     <defs>
                         <linearGradient id="b" x1="16.08" y1="-16.52" x2="10.26" y2="20.44"
                             gradientUnits="userSpaceOnUse">
@@ -83,27 +82,45 @@
                     </g>
                 </svg>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+            <div class="order-lg-2 ms-auto">
+                <button type="button" class="btn btn-outline-primary">Get Started</button>
+            </div>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end order-lg-1" id="navbarNav">
                 <div class="navbar-nav navbar-nav mx-auto mb-2 mb-lg-0">
-                    <a class="nav-link" href="#top">Home</a>
+                    <a class="nav-link" href="#home">Home</a>
                     <a class="nav-link ps-5" href="#features">Features</a>
                     <a class="nav-link ps-5" href="#testimonial">Testimonials</a>
                     <a class="nav-link ps-5" href="#pricing">Pricing</a>
                 </div>
             </div>
-            <div>
-                <button type="button" class="btn btn-outline-primary">Get Started</button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu"
+                aria-labelledby="offcanvasMenuLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="side-nav">
+                        <a class="nav-link ps-0" href="#home">Home</a>
+                        <a class="nav-link ps-0" href="#features">Features</a>
+                        <a class="nav-link ps-0" href="#testimonial">Testimonials</a>
+                        <a class="nav-link ps-0" href="#pricing">Pricing</a>
+                    </div>
+                </div>
             </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
         </div>
     </nav>
     <!-- END NAV -->
 
     <!-- START HEADER -->
-    <div class="header vh-100 d-flex align-items-center" id="#top">
+    <div class="header section d-flex" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6">
@@ -123,15 +140,20 @@
                             Watch Video
                         </button>
                     </div>
-                    <div class="sponsor d-flex justify-content-between align-items-stretch mt-5">
-                        <p class="white-font-faded">Sponsored by:</p>
-                        <img class="" src="/images/paypal.svg" alt="Paypal logo">
-                        <img class="" src="/images/google.svg" alt="Google logo">
-                        <img class="" src="/images/dropbox.svg" alt="Dropbox logo">
+                    <div class="sponsor d-flex flex-column flex-md-row align-items-stretch mt-5">
+                        <p class="white-font-faded flex-shrink-0 pe-md-4">Sponsored by:</p>
+                        <div class="d-flex">
+                            <div class="logo"><img class="" src="/images/paypal.svg" alt="Paypal logo">
+                            </div>
+                            <div class="logo"><img class="" src="/images/google.svg" alt="Google logo">
+                            </div>
+                            <div class="logo"><img class="" src="/images/dropbox.svg" alt="Dropbox logo">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-none d-lg-block position-relative">
-                    <div class="position-absolute dots "></div>
+                <div class="col-12 col-md-6 d-none d-lg-block position-relative align-self-center">
+                    <div class="position-absolute dots"></div>
                     <img class="position-relative img-fluid" src="/images/banner-phone1.png"
                         alt="Phone showing application">
                 </div>
@@ -141,7 +163,7 @@
     <!-- END HEADER -->
 
     <!-- START FEATURES -->
-    <div class="features text-center" id="features">
+    <div class="features section text-center" id="features">
         <div class="container">
             <h6 class="mini-heading pb-2">Quality features</h6>
             <h3>Exciting Features</h3>
@@ -170,10 +192,10 @@
     <!-- END FEATURES -->
 
     <!-- START FEATURES -->
-    <div class="features core position-relative">
+    <div class="features sub-section core position-relative">
         <div class="container">
-            <div class="row align-items-center justify-content-evenly">
-                <div class="col-12 col-md-5">
+            <div class="row align-items-md-center justify-content-md-evenly">
+                <div class="col-12 col-md-5 order-2 order-md-1">
                     <img class="img-fluid" src="/images/features.png" alt="">
                 </div>
                 <div class="col-12 col-md-5">
@@ -213,7 +235,7 @@
     <!-- END FEATURES -->
 
     <!-- START FEATURES -->
-    <div class="features">
+    <div class="features section">
         <div class="container">
             <div class="text-center">
                 <h6 class="mini-heading pb-2">Quality features</h6>
@@ -221,10 +243,10 @@
             </div>
 
             <div class="card-row row justify-content-evenly">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-3">
-                            <img class="" src="/images/hour.svg" alt="Suitcase icon">
+                            <img class="img-fluid" src="/images/hour.svg" alt="Suitcase icon">
                         </div>
                         <div class="col-9 ps-3">
                             <h6>Smart Features</h6>
@@ -233,10 +255,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-3">
-                            <img class="" src="/images/trophy.svg" alt="Suitcase icon">
+                            <img class="img-fluid" src="/images/trophy.svg" alt="Suitcase icon">
                         </div>
                         <div class="col-9 ps-3">
                             <h6>Fast Performance</h6>
@@ -245,10 +267,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-3">
-                            <img class="" src="/images/upload.svg" alt="Suitcase icon">
+                            <img class="img-fluid" src="/images/upload.svg" alt="Suitcase icon">
                         </div>
                         <div class="col-9 ps-3">
                             <h6>Unlimited Content</h6>
@@ -257,13 +279,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card-row row justify-content-evenly">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-3">
-                            <img class="" src="/images/gear.svg" alt="Suitcase icon">
+                            <img class="img-fluid" src="/images/gear.svg" alt="Suitcase icon">
                         </div>
                         <div class="col-9 ps-3">
                             <h6>Ultimate Customization</h6>
@@ -272,10 +292,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-3">
-                            <img class="" src="/images/playmaker.svg" alt="Suitcase icon">
+                            <img class="img-fluid" src="/images/playmaker.svg" alt="Suitcase icon">
                         </div>
                         <div class="col-9 ps-3">
                             <h6>Boost Productivity</h6>
@@ -284,10 +304,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
                     <div class="row">
                         <div class="col-3">
-                            <img class="" src="/images/speech.svg" alt="Suitcase icon">
+                            <img class="img-fluid" src="/images/speech.svg" alt="Suitcase icon">
                         </div>
                         <div class="col-9 ps-3">
                             <h6>Customer Support</h6>
@@ -297,13 +317,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- END FEATURES -->
 
     <!-- START FEATURES -->
-    <div class="features">
+    <div class="features sub-section">
         <div class="container">
             <div class="row align-items-center ">
                 <div class="col-12 col-md-5">
@@ -323,7 +342,7 @@
     <!-- END FEATURES -->
 
     <!-- START FUNCTION -->
-    <div class="function bg-blue">
+    <div class="function section bg-blue">
         <div class="container">
             <div class="text-center">
                 <h6 class="mini-heading pb-2 white-font">Whats the function</h6>
@@ -375,7 +394,7 @@
     <!-- END FUNCTION -->
 
     <!-- START TESTIMONIAL -->
-    <div class="testimonials" id="testimonial">
+    <div class="testimonials section" id="testimonial">
         <div class="container-fluid">
             <div class="text-center">
                 <h6 class="mini-heading pb-2">testimonials</h6>
@@ -389,7 +408,8 @@
                             <div class="stars" style="--rating: 4;" aria-label="Rating of this product is 4 out of 5.">
                             </div>
                             <p class="title">Modern look & trending design</p>
-                            <p class="content">Get working experience to work with this amazing team & in future want to work
+                            <p class="content">Get working experience to work with this amazing team & in future want to
+                                work
                                 together for
                                 bright future projects and also make deposit to freelancer.</p>
                             <div class="d-flex align-items-center" class="">
@@ -403,13 +423,14 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="owl-item">
                         <div class="testimonial-card">
                             <div class="stars" style="--rating: 4;" aria-label="Rating of this product is 4 out of 5.">
                             </div>
                             <p class="title">Design Quality & performance</p>
-                            <p class="content">Get working experience to work with this amazing team & in future want to work
+                            <p class="content">Get working experience to work with this amazing team & in future want to
+                                work
                                 together for
                                 bright future projects and also make deposit to freelancer.</p>
                             <div class="d-flex align-items-center" class="">
@@ -423,13 +444,14 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="owl-item">
                         <div class="testimonial-card">
                             <div class="stars" style="--rating: 4;" aria-label="Rating of this product is 4 out of 5.">
                             </div>
                             <p class="title">Layout and organized layers</p>
-                            <p class="content">Get working experience to work with this amazing team & in future want to work
+                            <p class="content">Get working experience to work with this amazing team & in future want to
+                                work
                                 together for
                                 bright future projects and also make deposit to freelancer.</p>
                             <div class="d-flex align-items-center" class="">
@@ -443,13 +465,14 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="owl-item">
                         <div class="testimonial-card">
                             <div class="stars" style="--rating: 4;" aria-label="Rating of this product is 4 out of 5.">
                             </div>
                             <p class="title">Modern look & trending design</p>
-                            <p class="content">Get working experience to work with this amazing team & in future want to work
+                            <p class="content">Get working experience to work with this amazing team & in future want to
+                                work
                                 together for
                                 bright future projects and also make deposit to freelancer.</p>
                             <div class="d-flex align-items-center" class="">
@@ -463,13 +486,14 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="owl-item">
                         <div class="testimonial-card">
                             <div class="stars" style="--rating: 4;" aria-label="Rating of this product is 4 out of 5.">
                             </div>
                             <p class="title">Design Quality & performance</p>
-                            <p class="content">Get working experience to work with this amazing team & in future want to work
+                            <p class="content">Get working experience to work with this amazing team & in future want to
+                                work
                                 together for
                                 bright future projects and also make deposit to freelancer.</p>
                             <div class="d-flex align-items-center" class="">
@@ -483,13 +507,14 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="owl-item">
                         <div class="testimonial-card">
                             <div class="stars" style="--rating: 4;" aria-label="Rating of this product is 4 out of 5.">
                             </div>
                             <p class="title">Layout and organized layers</p>
-                            <p class="content">Get working experience to work with this amazing team & in future want to work
+                            <p class="content">Get working experience to work with this amazing team & in future want to
+                                work
                                 together for
                                 bright future projects and also make deposit to freelancer.</p>
                             <div class="d-flex align-items-center" class="">
@@ -503,7 +528,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -513,7 +538,7 @@
     <!-- END TESTIMONIAL -->
 
     <!-- END PAYMENT -->
-    <div class="payment position-relative container">    
+    <div class="payment section position-relative container">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 ps-0">
                 <img class="img-fluid" src="/images/payment.png" alt="Phone with payment screen">
@@ -531,36 +556,49 @@
     <!-- END PAYMENT -->
 
     <!-- START PRICE -->
-    <div class="price bg-blue">
+    <div class="price section bg-blue" id="pricing">
         <div class="container">
             <div class="text-center">
                 <h6 class="mini-heading pb-2 white-font">pricing</h6>
                 <h3 class="white-font">Let’s see the price</h3>
             </div>
-            <div class="row justify-content-evenly">
-                <div class="col-5 card">
-                    <h5 class="white-font">Free Plan</h5>
-                    <p class="white-font">For Small teams or office</p>
-                    <ul class="white-font">
-                        <li>Ultimate access to all course, exercises and assessments</li>
-                        <li>Free access for all kind of exercise corrections with downloads.</li>
-                        <li>Total assessment corrections with free download access system</li>
-                        <li>Unlimited download of courses on the mobile app contents</li>
-                        <li>Download and print courses and exercises in PDF</li>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-4 card me-lg-5 mb-5 mb-lg-0">
+                    <h5 class="white-font mb-0">Free Plan</h5>
+                    <p class="white-font-faded mb-5">For Small teams or office</p>
+                    <ul class="white-font" role="list">
+                        <li class="check">Ultimate access to all course, exercises and assessments</li>
+                        <li class="check">Free access for all kind of exercise corrections with downloads.</li>
+                        <li class="check">Total assessment corrections with free download access system</li>
+                        <li class="no">Unlimited download of courses on the mobile app contents</li>
+                        <li class="no">Download and print courses and exercises in PDF</li>
                     </ul>
-                    <div><button type="button" class="btn btn-primary mt-4">Signup Now</button></div>
+                    <div class="mx-auto"><button type="button" class="btn btn-primary mt-4">Signup Now</button></div>
                 </div>
-                <div class="col-5 card">
-                    <h5>Premium</h5>
-                    <p class="">For Small teams or office</p>
-                    <ul class="">
-                        <li>Ultimate access to all course, exercises and assessments</li>
-                        <li>Free access for all kind of exercise corrections with downloads.</li>
-                        <li>Total assessment corrections with free download access system</li>
-                        <li>Unlimited download of courses on the mobile app contents</li>
-                        <li>Download and print courses and exercises in PDF</li>
+                <div class="col-12 col-sm-4 card">
+                    <span class="white-font rec-flag d-flex justify-content-center p-1 position-absolute">
+                        Recommended
+                    </span>
+
+                    <div class="d-flex flex-row justify-content-between">
+                        <div>
+                            <h5 class="mb-0">Premium</h5>
+                            <p class="mb-5">For startup enterprise</p>
+                        </div>
+                        <div>
+                            <p class="m-0">Starting from</p>
+                            <span class="price-tag m-0">$49.99/<span>mo</span> </span>
+                        </div>
+                    </div>
+
+                    <ul class="" role="list">
+                        <li class="check">Ultimate access to all course, exercises and assessments</li>
+                        <li class="check">Free access for all kind of exercise corrections with downloads.</li>
+                        <li class="check">Total assessment corrections with free download access system</li>
+                        <li class="check">Unlimited download of courses on the mobile app contents</li>
+                        <li class="check">Download and print courses and exercises in PDF</li>
                     </ul>
-                    <button type="button" class="btn btn-secondary mt-4">Signup Now</button>
+                    <div class="mx-auto"><button type="button" class="btn btn-secondary mt-4">Signup Now</button></div>
                 </div>
             </div>
 
@@ -568,9 +606,90 @@
     </div>
     <!-- END PRICE -->
 
+    <!-- START FAQ -->
+
+    <div class="faq section">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="mini-heading pb-2">faq</h6>
+                <h3>Frequently asked questions</h3>
+            </div>
+            <div class="col-12 col-md-8 mx-auto">
+                <div class="accordion accordion-flush" id="accordionFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How to contact with riders emergency ?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Get your website ads tests delivered at let collect sample from the victory of the
+                                managements that supplies best design system which guidelines ever with multiple
+                                features.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                App installation failed, how to update system information ?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Rhino skin maybe thick but it can be quite sensitive to sunburns and insect bites which
+                                is why they like wallow so much – when the mud dries it acts as protection from the
+                                sunburns and insects.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Website response taking time, how to improve ?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Get your blood tests delivered at the home collect a sample from management news. Get
+                                your blood tests delivered at the home collect a sample from management news. Get your
+                                blood tests delivered at the home collect a sample from management news. Get your blood
+                                tests delivered at the home.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                New update fixed all bug and issues ?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                If you’re looking to hunt a unicorn, but don’t know where to begin, try Lake Superior
+                                State University in Sault Ste. Marie, Michigan. Since 1971, the university has issued
+                                permits to unicorn questers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FAQ -->
+
 
     <!-- START FOOTER -->
-    <div class="footer container">
+    <div class="footer section container">
         <div class="row justify-content-evenly">
             <div class="col-6 col-md-2">
                 <p class="footer-header large-font pb-4">About Us</p>
