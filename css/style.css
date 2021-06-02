@@ -416,7 +416,7 @@ p {
 }
 
 .testimonials .testimonial-card {
-    width: 420px;
+    min-width: 320px;
     /* border: 1px solid #343D48; */
     border-radius: 30px;
     padding: 45px;
@@ -487,6 +487,9 @@ p {
 .owl-theme .owl-nav [class*="owl-"]:hover {
     background: transparent;
     color: var(--light);
+}
+.owl-theme .owl-nav [class*="owl-"].disabled {
+    pointer-events: none;
 }
 
 .owl-carousel .owl-item .testimonial-card {
@@ -619,6 +622,15 @@ p {
 
 .accordion-button::after {
     display: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
 }
 
 

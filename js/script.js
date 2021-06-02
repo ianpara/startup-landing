@@ -10,11 +10,10 @@ if (window.pageYOffset > 100) {
 $(document).ready(function () {
     var silder = $(".owl-carousel");
     silder.owlCarousel({
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 8000,
     autoplayHoverPause: false,
     items: 1,
-    startPosition: 1,
     stagePadding: 20,
     center: true,
     nav: true,
@@ -28,7 +27,7 @@ $(document).ready(function () {
     575: { items: 2 },
     768: { items: 2 },
     991: { items: 3 },
-    1200: { items: 4 }
+    1200: { items: 3 }
     }
     });
     });
